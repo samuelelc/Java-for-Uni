@@ -1,3 +1,7 @@
+/*	Samuele Lo Cascio
+ * 	ESERCITAZIONE 6
+ * 	es2-es3
+*/
 package prg.es2_3;
 
 import java.util.ArrayList;
@@ -60,47 +64,44 @@ public class IntegerSet{
 
 	private ArrayList<Integer> set = new ArrayList<>();
 
-	public IntegerSet insertElement(int n){
-		//verifica se l'elemento è già presente
-		for (Integer tmp : this.set) {
-			if (tmp.intValue() == n) {
-				System.out.println("Elemento gia' presente");
-				return this;
-			}			
+	public IntegerSet insertElement(int element){
+		if(checkElement(element)){	//verifica se l'elemento è già presente
+			this.set.add(Integer.valueOf(element));
+		} else {
+			System.out.println("Elemento gia' presente");
 		}
-		this.set.add(Integer.valueOf(n));
 		return this;
 	}
 
-	public IntegerSet deleteElement(int n){
-		this.set.remove(Integer.valueOf(n));
+	public IntegerSet deleteElement(int element){
+		this.set.remove(Integer.valueOf(element));
 		return this;
 	}
 
-	public boolean checkElement(int n){
+	public boolean checkElement(int element){
 		for (Integer tmp : this.set) {
-			if(tmp.intValue() == n){
+			if(tmp.intValue() == element){
 				return true;
 			}
 		}
 		return false;
 	}
 
-	public IntegerSet unionOfIntegerSet(IntegerSet intSet){		
+	public IntegerSet unionOfIntegerSet(IntegerSet otherSet){		
 		IntegerSet union = new IntegerSet();
 		for(Integer n : this.set){
 			union.insertElement(n);
 		}
-		for(Integer m : intSet.set){
+		for(Integer m : otherSet.set){
 			union.insertElement(m);		//nota: se l'elemento è già presente la funzione insertElement non lo inserisce (vedi insertElement r.63)
 		}
 		return union;
 	}
 
-	public IntegerSet intersectionOfIntegerSet(IntegerSet intSet){
+	public IntegerSet intersectionOfIntegerSet(IntegerSet otherSet){
 		IntegerSet intersection = new IntegerSet();
 		for (Integer n : this.set) {
-			if(intSet.checkElement(n)){
+			if(otherSet.checkElement(n)){
 				intersection.insertElement(n);
 			}
 		}
