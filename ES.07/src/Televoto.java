@@ -3,8 +3,8 @@ package prg.es3;
 import java.util.ArrayList;
 
 public class Televoto{
-	ArrayList<Partecipante> listaPartecipanti = new ArrayList<>();
-	ArrayList<Votante> listaVotanti = new ArrayList<>();
+	private ArrayList<Partecipante> listaPartecipanti = new ArrayList<>();
+	private ArrayList<Votante> listaVotanti = new ArrayList<>();
 
 	public Televoto(){
 		//IMPOSTAZIONE PARTECIPANTI
