@@ -1,6 +1,6 @@
 package prg.es3;
 
-public class Razionale{
+public class Razionale extends Numero{
 	private int num;
 	private int den = 1;
 
@@ -61,14 +61,28 @@ public class Razionale{
 		return this;
 	}
 
-	public Razionale sum(Razionale r){
-		Razionale result = new Razionale(this.getNum()*r.getDen()+r.getNum()*this.getDen(), this.getDen()*r.getDen());
-		return result.reduce();
+	public Numero somma(Numero add){
+		if(add instanceof Razionale){
+			Razionale addRazionale = (Razionale) add;
+			Razionale result = new Razionale(this.getNum()*addRazionale.getDen()+addRazionale.getNum()*this.getDen(), this.getDen()*addRazionale.getDen());
+			return result.reduce();
+		} else {
+			System.out.println("Errore. Operandi eterogenei");
+			return null;
+		}
+		
 	}
 
-	public Razionale sub(Razionale r){
-		Razionale result = new Razionale(this.getNum()*r.getDen()-r.getNum()*this.getDen(), this.getDen()*r.getDen());
-		return result.reduce();
+	public Numero sottrai(Numero sott){
+		if(sott instanceof Razionale){
+			Razionale sottRazionale = (Razionale) sott;
+			Razionale result = new Razionale(this.getNum()*sottRazionale.getDen()-sottRazionale.getNum()*this.getDen(), this.getDen()*sottRazionale.getDen());
+			return result.reduce();
+		} else {
+			System.out.println("Errore. Operandi eterogenei");
+			return null;
+		}
+		
 	}
 
 	public Razionale product(Razionale r){
