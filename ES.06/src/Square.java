@@ -1,6 +1,8 @@
 package prg.es4;
 
-public class Square extends Rectangle{
+import prg.es2.Drawable;
+
+public class Square extends Rectangle implements Drawable{
 	private int width;
 	private int length;
 	
@@ -32,8 +34,7 @@ public class Square extends Rectangle{
 		return "Square, " + "Colour: " + this.getColour() + ", Fill: " + this.getFill() +", Side: " + this.getWidth() + ", Perimeter: " + this.perimeter() + ", Area: " + this.area();
 	}
 
-	public Square toPrint(){
+	public void draw(){
 		System.out.println(this.toString());
-		return this;
 	}
 }

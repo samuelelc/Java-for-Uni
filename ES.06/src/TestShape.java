@@ -17,10 +17,13 @@ public class TestShape{
 
 		//TEST FUNZIONI set E toPrint()
 		rettangolo.fillOn().setColour("Orange");
-		rettangolo.setWidth(20).setLength(10).toPrint();
+		rettangolo.setWidth(20).setLength(10);
+		rettangolo.draw();
 		quadrato.fillOn().setColour("Red");
-		quadrato.setSide(10).toPrint();
+		quadrato.setSide(10);
+		quadrato.draw();
 		cerchio.fillOn().setColour("Green");	//Green non sarà considerato un colore valido, dunque stamperà errore (vedi setOfColours[] definito nella classe "Shape")
-		cerchio.setRadius(23).toPrint();	
+		cerchio.setRadius(23);
+		cerchio.draw();	
 	}
 }

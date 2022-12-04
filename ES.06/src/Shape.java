@@ -1,6 +1,8 @@
 package prg.es4;
 
-public class Shape{
+import prg.es2.Drawable;
+
+public class Shape implements Drawable{
 	private String colour;
 	private boolean fill;
 	private static String[] setOfColours = {"Red", "Orange", "Yellow", "Blue", "Black"};
@@ -36,5 +38,13 @@ public class Shape{
 
 	public String getColour(){
 		return this.colour;
+	}
+
+	public String toString(){
+		return ", Colour: " + this.getColour() + ", Fill: " + this.getFill();
+	}
+
+	public void draw(){
+		System.out.println(this.toString());
 	}
 }

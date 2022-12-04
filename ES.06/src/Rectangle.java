@@ -1,6 +1,9 @@
 package prg.es4;
 
-public class Rectangle extends Shape{
+import prg.es2.Scalable;
+import prg.es2.Drawable;
+
+public class Rectangle extends Shape implements Scalable, Drawable{
 	private int width;
 	private int length;
 
@@ -41,11 +44,15 @@ public class Rectangle extends Shape{
 	}
 	
 	public String toString(){
-		return "Rectangle, " + "Colour: " + this.getColour() + ", Fill: " + this.getFill() +", Width: " + this.getWidth() + ", Length: " + this.getLength() + ", Perimeter: " + this.perimeter() + ", Area: " + this.area();
+		return "Rectangle, " + super.toString() +", Width: " + this.getWidth() + ", Length: " + this.getLength() + ", Perimeter: " + this.perimeter() + ", Area: " + this.area();
 	}
 
-	public Rectangle toPrint(){
-		System.out.println(this.toString());
-		return this;
+	public void draw(){
+		System.out.println(this.toString());	
+	}
+
+	public void scale(double factor){
+		this.width *= factor;
+		this.length *= factor;
 	}
 }

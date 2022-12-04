@@ -21,16 +21,18 @@ public class Abbonato extends Persona{
 		this.setDiscount(discount);
 	}
 
-	public void setDiscount(int percent){		//50 = 50 percento
+	public Abbonato setDiscount(int percent){		//50 = 50 percento
 		if(percent < 100 && percent >= 0){
 			this.discount = (float) percent/100;
 		}
+		return this;
 	}
 
-	public void setDiscount(float percent){	//0.50 = 50 percento
+	public Abbonato setDiscount(float percent){	//0.50 = 50 percento
 		if(percent < 1 && percent >= 0){
 			this.discount = percent; 
 		}
+		return this;
 	}
 
 	public float getDiscount(){
@@ -41,16 +43,19 @@ public class Abbonato extends Persona{
 		return this.getBasketValue() * (1 - this.getDiscount());
 	}
 
-	public void addToBasketValue(float price){
+	public Abbonato addToBasketValue(float price){
 		this.setBasketValue(this.getBasketValue()+price);
+		return this;
 	}
 
-	public void removeToBasketValue(float price){
+	public Abbonato removeToBasketValue(float price){
 		this.setBasketValue(this.getBasketValue()-price);
+		return this;		
 	}
 
-	private void setBasketValue(float value){	//do solo la possibilita di aggiungere  e rimuove valore al carrello e non di settarlo direttamente. per cui imposto il metodo come private
+	private Abbonato setBasketValue(float value){	//do solo la possibilita di aggiungere  e rimuove valore al carrello e non di settarlo direttamente. per cui imposto il metodo come private
 		this.basketValue = value;
+		return this;
 	}
 
 	public float getBasketValue(){

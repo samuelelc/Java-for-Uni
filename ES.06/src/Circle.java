@@ -1,8 +1,10 @@
 package prg.es4;
 
+import prg.es2.Scalable;
+import prg.es2.Drawable;
 import java.lang.Math;
 
-public class Circle extends Shape{
+public class Circle extends Shape implements Scalable, Drawable{
 	private int radius;
 	
 	//COSTRUTTORI:
@@ -31,11 +33,14 @@ public class Circle extends Shape{
 	}
 
 	public String toString(){
-		return "Circle, " + "Colour: " + this.getColour() + ", Fill: " + this.getFill() +", Radius: " + this.getRadius() + ", Perimeter: " + Math.round(this.perimeter()) + ", Area: " + Math.round(this.area());
+		return "Circle, " + super.toString() +", Radius: " + this.getRadius() + ", Perimeter: " + Math.round(this.perimeter()) + ", Area: " + Math.round(this.area());
 	}
 
-	public Circle toPrint(){
+	public void draw(){
 		System.out.println(this.toString());
-		return this;
+	}
+
+	public void scale(double factor){
+		this.radius *= factor;
 	}
 }
