@@ -28,7 +28,7 @@ public class Abbonato extends Persona{
 		return this;
 	}
 
-	public Abbonato setDiscount(float percent){	//0.50 = 50 percento
+	public Abbonato setDiscount(float percent){		//0.50 = 50 percento
 		if(percent < 1 && percent >= 0){
 			this.discount = percent; 
 		}

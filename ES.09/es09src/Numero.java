@@ -1,7 +1,5 @@
-package prg.es3;
+package prg.es09;
 
 public abstract class Numero implements Aritmetica{
 	//eredita i metodi astratti di Aritmetica
-
-	public abstract void toPrint();
 }

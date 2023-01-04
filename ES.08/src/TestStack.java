@@ -4,8 +4,8 @@ import prg.es1.Stack;
 
 public class TestStack{
 	public static void main(String[] args) {
-		Stack stack1 = new Stack();
-		Stack stack2 = new Stack();
+		Stack<String> stack1 = new Stack<>();
+		Stack<String> stack2 = new Stack<>();
 
 		//STATO 0
 		System.out.println("STATO 0");

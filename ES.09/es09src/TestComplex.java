@@ -1,4 +1,5 @@
-package prg.es2;
+// LO CASCIO
+package prg.es09;
 
 import java.util.Scanner;
 
@@ -10,9 +11,9 @@ public class TestComplex{
 		Complex c1 = new Complex();
 		System.out.println("Primo numero complesso");
 		System.out.print("Inserisci componente reale: \t\t");
-		c1.setReal(input.nextDouble());
+		c1.setRe(input.nextDouble());
 		System.out.print("Inserisci componente imaginaria: \t");
-		c1.setImaginary(input.nextDouble());
+		c1.setIm(input.nextDouble());
 		System.out.println("Numero inserito: " + c1);
 		
 		System.out.println();
@@ -21,9 +22,9 @@ public class TestComplex{
 		Complex c2 = new Complex();
 		System.out.println("Secondo numero complesso");
 		System.out.print("Inserisci componente reale: \t\t");
-		c2.setReal(input.nextDouble());
+		c2.setRe(input.nextDouble());
 		System.out.print("Inserisci componente imaginaria: \t");
-		c2.setImaginary(input.nextDouble());
+		c2.setIm(input.nextDouble());
 		System.out.println("Numero inserito: " + c2);
 		
 		System.out.println();
@@ -31,6 +32,6 @@ public class TestComplex{
 		//RISULTATI
 		System.out.println("Somma: \t\t(" + c1 + ") + (" + c2 + ") = " + c1.somma(c2));
 		System.out.println("Sottrazione: \t(" + c1 + ") - (" + c2 + ") = " + c1.sottrai(c2));
-		System.out.println("Sono uguali? " + c1.equals(c2));
+/*		System.out.println("Sono uguali? " + c1.equals(c2)); */
  	}
 }

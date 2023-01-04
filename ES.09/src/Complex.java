@@ -48,8 +48,7 @@ public class Complex extends Numero{
 			Complex complexAdd = (Complex) add;
 			return new Complex(this.getReal() + complexAdd.getReal(), this.getImaginary() + complexAdd.getImaginary());
 		} else {
-			System.out.println("Errore. Operandi eterogenei");
-			return null;
+			throw new ArithmeticException("Operandi Eterogenei");
 		}
 	}
 	
@@ -59,10 +58,8 @@ public class Complex extends Numero{
 			Complex complexSott = (Complex) sott;
 			return new Complex(this.getReal() - complexSott.getReal(), this.getImaginary() - complexSott.getImaginary());
 		} else {
-			System.out.println("Errore. Operandi eterogenei");
-			return null;
+			throw new ArithmeticException("Operandi Eterogenei");
 		}
-		
 	}
 	
 	public double distance(Complex other){

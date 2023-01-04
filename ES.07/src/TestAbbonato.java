@@ -19,6 +19,7 @@ public class TestAbbonato{
 		abbsys.newAbbonato(new AbbonatoPremium(	"Claudio", 			"Trasparente", 	0.50f));
 		abbsys.newAbbonato(new AbbonatoPremium(	"Violetta", 		"Indaco", 		0.44f));
 
+		//STAMPA INIZIALE
 		System.out.println("PRIMA------------------------------------------------------------------");
 		abbsys.printAbbonati();
 		System.out.println();
@@ -29,6 +30,7 @@ public class TestAbbonato{
 		Abbonato abb0 = abbsys.getAbbonato(0).setDiscount(0.50f).addToBasketValue(300);
 		Abbonato abb6 = abbsys.getAbbonato(6).setDiscount(0.40f).addToBasketValue(560);
 
+		//STAMPA FINALE
 		System.out.println("DOPO-------------------------------------------------------------------");
 		abbsys.printAbbonati();
 		System.out.println();
@@ -37,7 +39,7 @@ public class TestAbbonato{
 		System.out.println();
 
 		System.out.println("L'abbonato 0 deve pagare: " + abb0.applyDiscount());
-		System.out.println("L'abbonato 7 deve pagare: " + abb6.applyDiscount());
+		System.out.println("L'abbonato 6 deve pagare: " + abb6.applyDiscount());
 
 	}
 }

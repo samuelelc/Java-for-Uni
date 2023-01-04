@@ -1,8 +1,9 @@
 package prg.es4;
 
 import prg.es2.Drawable;
+import prg.es2.Scalable;
 
-public class Shape implements Drawable{
+public abstract class Shape implements Drawable, Scalable{
 	private String colour;
 	private boolean fill;
 	private static String[] setOfColours = {"Red", "Orange", "Yellow", "Blue", "Black"};
@@ -44,7 +45,8 @@ public class Shape implements Drawable{
 		return ", Colour: " + this.getColour() + ", Fill: " + this.getFill();
 	}
 
-	public void draw(){
-		System.out.println(this.toString());
-	}
+	
+	public abstract double perimeter();
+
+	public abstract double area();
 }

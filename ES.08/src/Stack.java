@@ -1,22 +1,27 @@
 package prg.es1;
 
 import java.util.ArrayList;
+import java.lang.IllegalArgumentException;
+import java.util.EmptyStackException;
 
-public class Stack{
-	private ArrayList<String>  stackOfString = new ArrayList<>();
+public class Stack<E>{
+	private ArrayList<E>  stackOfString = new ArrayList<>();
 
-	public void push(String string){
+	public void push(E element){
 		if (!this.isFull()) {
-			stackOfString.add(0, string);	
+			stackOfString.add(0, element);	
 		} else {
-			System.out.println("Stack pieno");
+			throw new IllegalArgumentException("StackPieno");
 		}
 	}
 
-	public String pop(){
-		String res = stackOfString.get(0);
-		stackOfString.remove(0);
-		return res;
+	public E pop(){
+		if(!isEmpty()){
+			return stackOfString.remove(0);
+		} else {
+			throw new EmptyStackException();
+		}
+
 	}
 
 	public boolean isEmpty(){
@@ -54,8 +59,8 @@ public class Stack{
 		if(this.isEmpty()){
 			res += " - ";
 		} else {
-			for (String string : stackOfString) {
-				res += "\n" + string;
+			for (E element : stackOfString) {
+				res += "\n" + element;
 			}
 		}
 		return res;

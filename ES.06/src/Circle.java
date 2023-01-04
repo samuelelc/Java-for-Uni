@@ -2,16 +2,15 @@ package prg.es4;
 
 import prg.es2.Scalable;
 import prg.es2.Drawable;
-import java.lang.Math;
 
-public class Circle extends Shape implements Scalable, Drawable{
-	private int radius;
+public class Circle extends Shape{
+	private double radius;
 	
 	//COSTRUTTORI:
 	public Circle(){}
 
 	public Circle(int radius){
-		this.setRadius(Math.abs(radius));
+		this.setRadius(radius);
 	}
 
 	//METODI:
@@ -20,14 +19,16 @@ public class Circle extends Shape implements Scalable, Drawable{
 		return this;
 	}
 
-	public int getRadius(){
+	public double getRadius(){
 		return this.radius;
 	}
 
+	@Override
 	public double perimeter(){
 		return 2*Math.PI*this.getRadius();
 	}
 
+	@Override
 	public double area(){
 		return Math.PI*Math.pow(this.getRadius(), 2);
 	}
@@ -36,10 +37,12 @@ public class Circle extends Shape implements Scalable, Drawable{
 		return "Circle, " + super.toString() +", Radius: " + this.getRadius() + ", Perimeter: " + Math.round(this.perimeter()) + ", Area: " + Math.round(this.area());
 	}
 
+	@Override
 	public void draw(){
 		System.out.println(this.toString());
 	}
 
+	@Override
 	public void scale(double factor){
 		this.radius *= factor;
 	}

@@ -3,9 +3,9 @@ package prg.es4;
 import prg.es2.Scalable;
 import prg.es2.Drawable;
 
-public class Rectangle extends Shape implements Scalable, Drawable{
-	private int width;
-	private int length;
+public class Rectangle extends Shape{
+	private double width;
+	private double length;
 
 	//COSTRUTTORI:
 	public Rectangle(){}
@@ -26,20 +26,22 @@ public class Rectangle extends Shape implements Scalable, Drawable{
 		return this;
 	}
 
-	public int getWidth(){
+	public double getWidth(){
 		return this.width;
 	}
 
 	
-	public int getLength(){
+	public double getLength(){
 		return this.length;
 	}
 
-	public int perimeter(){
+	@Override
+	public double perimeter(){
 		return 2*this.getWidth() + 2*this.getLength();
 	}
 
-	public int area(){
+	@Override
+	public double area(){
 		return this.getWidth() * this.getLength();
 	}
 	
@@ -47,10 +49,12 @@ public class Rectangle extends Shape implements Scalable, Drawable{
 		return "Rectangle, " + super.toString() +", Width: " + this.getWidth() + ", Length: " + this.getLength() + ", Perimeter: " + this.perimeter() + ", Area: " + this.area();
 	}
 
+	@Override
 	public void draw(){
 		System.out.println(this.toString());	
 	}
 
+	@Override
 	public void scale(double factor){
 		this.width *= factor;
 		this.length *= factor;

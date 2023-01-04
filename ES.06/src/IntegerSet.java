@@ -65,10 +65,13 @@ public class IntegerSet{
 	private ArrayList<Integer> set = new ArrayList<>();
 
 	public IntegerSet insertElement(int element){
-		if(checkElement(element)){	//verifica se l'elemento è già presente
+		if(element >= 100 || element < 0){
+			throw new IllegalArgumentException("Elemento non valido");
+		}
+		if(!checkElement(element)){	//verifica se l'elemento è già presente
 			this.set.add(Integer.valueOf(element));
 		} else {
-			System.out.println("Elemento gia' presente");
+			throw new IllegalArgumentException("Elemento gia' presente");
 		}
 		return this;
 	}
