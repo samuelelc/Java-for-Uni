@@ -10,8 +10,13 @@ public class TestRazionale{
 		System.out.println("PRIMO NUMERO RAZIONALE:");
 		System.out.print("Inserisci Numeratore: ");
 		r1.setNum(input.nextInt());
+		try{
 		System.out.print("Inserisci Denominatore: ");
 		r1.setDen(input.nextInt());
+		} catch(IllegalArgumentException exp){
+			r1.setDen(1);
+			System.out.println("Denominatore impostato a 1");
+		}
 
 		System.out.println("SECONDO NUMERO RAZIONALE:");
 		System.out.print("Inserisci Numeratore: ");
@@ -23,9 +28,9 @@ public class TestRazionale{
 		r2.toPrint();
 
 		System.out.print("Somma: ");
-		r1.sum(r2).toPrint();
+		r1.somma(r2).toPrint();
 		System.out.print("Sottrazione: ");
-		r1.sub(r2).toPrint();
+		r1.sottrai(r2).toPrint();
 		System.out.print("Prodotto: ");
 		r1.product(r2).toPrint();
 		System.out.print("Divisione: ");

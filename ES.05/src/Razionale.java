@@ -1,5 +1,8 @@
 package prg.es3;
 
+import java.lang.ArithmeticException;
+import java.lang.IllegalArgumentException;
+
 public class Razionale extends Numero{
 	private int num;
 	private int den = 1;
@@ -22,7 +25,7 @@ public class Razionale extends Numero{
 		if(den != 0){
 			this.den = den;
 		} else {
-			System.out.println("Il denominatore deve essere diverso da zero");
+			throw new IllegalArgumentException("Il denominatore deve essere diverso da 0");
 		}
 		return this;
 	}
@@ -41,13 +44,13 @@ public class Razionale extends Numero{
 			return this;
 		}
 		int min;
-		if(this.num <= this.den){
-			min = this.getNum();
+		if(Math.abs(this.num) <= Math.abs(this.den)){
+			min = Math.abs(this.getNum());
 		} else {
-			min = this.getDen();
+			min = Math.abs(this.getDen());
 		}
 		cerca_numeri_primi:
-		for(int i = 2; i < min; i++){
+		for(int i = 2; i <= min; i++){
 			for(int j = 2; j < i; j++){
 				if(i%j==0){
 					continue cerca_numeri_primi;
@@ -61,33 +64,38 @@ public class Razionale extends Numero{
 		return this;
 	}
 
+	@Override
 	public Numero somma(Numero add){
 		if(add instanceof Razionale){
 			Razionale addRazionale = (Razionale) add;
 			Razionale result = new Razionale(this.getNum()*addRazionale.getDen()+addRazionale.getNum()*this.getDen(), this.getDen()*addRazionale.getDen());
 			return result.reduce();
 		} else {
-			System.out.println("Errore. Operandi eterogenei");
-			return null;
+			throw new ArithmeticException();
 		}
 		
 	}
 
+	@Override
 	public Numero sottrai(Numero sott){
 		if(sott instanceof Razionale){
 			Razionale sottRazionale = (Razionale) sott;
 			Razionale result = new Razionale(this.getNum()*sottRazionale.getDen()-sottRazionale.getNum()*this.getDen(), this.getDen()*sottRazionale.getDen());
 			return result.reduce();
 		} else {
-			System.out.println("Errore. Operandi eterogenei");
-			return null;
+			throw new ArithmeticException();
 		}
 		
 	}
 
-	public Razionale product(Razionale r){
-		Razionale result = new Razionale(this.getNum() * r.getNum(), this.getDen() * r.getDen());
-		return result.reduce();
+	public Numero product(Numero fatt){
+		if(fatt instanceof Razionale){
+			Razionale fattRazionale = (Razionale) fatt;
+			Razionale result = new Razionale(this.getNum() * fattRazionale.getNum(), this.getDen() * fattRazionale.getDen());
+			return result.reduce();
+		} else {
+			throw new ArithmeticException();
+		}
 	}
 
 	public Razionale divide(Razionale r){

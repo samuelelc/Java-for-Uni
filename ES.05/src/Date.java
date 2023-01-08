@@ -1,11 +1,13 @@
 package prg.es4;
 
+import java.lang.IllegalArgumentException;
+
 public class Date{
 	private int day;
 	private int month;
 	private String sMonth;
 	private int year;
-	private static String[] setMonth = {"Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"};
+	private final static String[] setMonth = {"Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"};
 
 	//COSTRUTTORI:
 	public Date(){}
@@ -42,58 +44,65 @@ public class Date{
 			this.setMonth(1);
 			this.day = day;
 		} else {
-			System.out.println("Dato inserito non valido! Verra' Impostato 1");
-			this.day = 1;
+			throw new IllegalArgumentException("Giorno inserito non valido");
 		}
 		return this;
 	}
 
 	public Date setMonth(int month){
-		this.month = month;
 		switch (month) {
 			case 1:
 				this.sMonth = "Gennaio";
+				this.month = month;
 				break;
 
 			case 2:
 				this.sMonth = "Febbraio";
+				this.month = month;
 				break;
 			case 3:
 				this.sMonth = "Marzo";
+				this.month = month;
 				break;
 			case 4:
 				this.sMonth = "Aprile";
+				this.month = month;
 				break;
 			case 5:
 				this.sMonth = "Maggio";
+				this.month = month;
 				break;
 			case 6:
 				this.sMonth = "Giugno";
+				this.month = month;
 				break;
 			case 7:
 				this.sMonth = "Luglio";
+				this.month = month;
 				break;
 			case 8:
 				this.sMonth = "Agosto";
+				this.month = month;
 				break;
 			case 9:
 				this.sMonth = "Settembre";
+				this.month = month;
 				break;
 			case 10:
 				this.sMonth = "Ottobre";
+				this.month = month;
 				break;
 			case 11:
 				this.sMonth = "Novembre";
+				this.month = month;
 				break;
 			case 12:
 				this.sMonth = "Dicembre";
+				this.month = month;
 				break;
 		
 			default:
-				System.out.println("Dato non valido! Verra' impostato Gennaio.");
-				this.month = 1;
-				this.sMonth = "Gennaio";
-				break;
+				throw new IllegalArgumentException("Mese inserito non valido");
 		}
 		return this;
 	}
@@ -108,9 +117,7 @@ public class Date{
 			}
 		}
 		if(check == false){
-			System.out.println("Dato non valido! Verra' impostato Gennaio");
-			this.month = 1;
-			this.sMonth = "Gennaio";
+			throw new IllegalArgumentException("Mese inserito non valido");
 		}
 		return this;
 	}
@@ -119,8 +126,7 @@ public class Date{
 		if(year < 2500){
 			this.year = year;
 		} else {
-			System.out.println("Dato inserito non valido! Verra' Impostato 2022");
-			this.year = 2022;
+			throw new IllegalArgumentException("Anno inserito non valido");
 		}
 		return this;
 	}

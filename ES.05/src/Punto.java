@@ -1,4 +1,5 @@
 package prg.es1;
+import java.util.InputMismatchException;
 
 public class Punto{
 	private double x;
