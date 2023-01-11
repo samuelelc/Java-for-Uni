@@ -6,7 +6,9 @@ public class TestSeggio{
 	public static void main(String[] args){
 		//ciclo infinito che chiede matricola e codice di controllo
 		
-		//se corretti stampa lista numerata di candidati + 0. scheda bianca e fa votare
+		//se i dati immessi sono corretti stampa lista numerata di candidati + 0. scheda bianca e fa votare
+		
+		//stampa i risultati dello spoglio dopo ogni voto
 		
 		Seggio seggio = new Seggio();
 		Scanner input = new Scanner(System.in);

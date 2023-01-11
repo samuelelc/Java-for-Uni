@@ -52,4 +52,6 @@ public class Candidato extends Studente{
 	public String toString(){
 		return super.toString() + "\tNome Lista: " + this.getNomeLista() + "\tNumero voti: " + this.getNumeroVoti();
 	}
+	
+	
 }

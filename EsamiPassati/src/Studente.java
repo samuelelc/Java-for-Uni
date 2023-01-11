@@ -8,7 +8,7 @@ public class Studente{
 	private boolean haVotato;
 	
 	//costruttori
-	private Studente(){
+	public Studente(){
 		haVotato = false;
 	}
 	
@@ -77,4 +77,5 @@ public class Studente{
 	public String toString(){
 		return "Matricola: " + this.getMatricola() + "\tControlCode: " + this.getControlCode() + "\tNome: " + this.getNome() + "\tCognome: " + this.getCognome() + "\tHaVotato? " + this.getHaVotato();
  	}
+	
 }

@@ -23,8 +23,8 @@ public class Seggio{
 		allStudents.add(new Candidato(1241245343, 382700, "Gianni", "Bisesi", "Diritto allo studio"));
 		allStudents.add(new Candidato(1249912453, 382722, "Carlo", "Lupi", "Liberi"));
 		
-		schedeBianche = 0;
-		schedeNonValide = 0;
+		schedeBianche.setSchedeBianche(0);
+		schedeNonValide.setSchedeNonValide(0);
 	}
 	
 	//metodi set
@@ -109,13 +109,20 @@ public class Seggio{
 	
 	//spoglio
 	public Seggio spoglio(){
+		/*
+		numero votanti
+		percentuale votanti
+		numero schede bianche
+		numero schede nulle
+		voti di ciascun candidato
+		*/
 		int totaleVoti = schedeBianche + schedeNonValide;
 		int i = 1;
 		System.out.println("SPOGLIO: ");
 		for(Studente tmp : allStudents){
 			if(tmp instanceof Candidato){
 				Candidato candidato = (Candidato) tmp;
-				System.out.println(i + candidato.getNome() + candidato.getCognome() + "\tLista: " + candidato.getNomeLista() + "\tNumero voti: " + candidato.getNumeroVoti());
+				System.out.println(i + ". " + candidato.getNome() + candidato.getCognome() + "\tLista: " + candidato.getNomeLista() + "\tNumero voti: " + candidato.getNumeroVoti());
 				totaleVoti += candidato.getNumeroVoti();
 				i++;
 			}
@@ -126,10 +133,5 @@ public class Seggio{
 		System.out.println("Numero schede nulle: " + schedeNonValide);
 		return this;
 	}
-	/*
-	numero votanti
-	percentuale votanti
-	numero schede bianche
-	numero schede nulle
-	voti di ciascun candidato*/
+	
 }
