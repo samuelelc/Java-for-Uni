@@ -39,16 +39,7 @@ public class Incontro{
 			return this;
 		}
 		System.out.println("TERZO SET:");
-		refreshSetScore(this.thirdSet.simulaSet());
-		if(setVinti.get(firstPlayer) == 2){
-			System.out.println(firstPlayer + " HA VINTO LA PARTITA");
-			return this;
-		}
-		if(setVinti.get(secondPlayer) == 2){
-			System.out.println(secondPlayer + " HA VINTO LA PARTITA");
-			return this;		
-		}
-		
+		System.out.println(refreshSetScore(this.thirdSet.simulaSet()) + " HA VINTO LA PARTITA");
 		return this;
 	}
 }
