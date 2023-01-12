@@ -32,7 +32,7 @@ public class Set{
 		this.score.put(first, 0);
 		this.score.put(second, 0);
 		System.out.println("0 - 0");
-		while(score.get(first) != 6 || score.get(second) != 6){
+		while(score.get(first) != numeroGiochi || score.get(second) != numeroGiochi){
 			int giocoVinto = (int) (Math.random()*2.0);
 			this.setScore(giocoVinto);
 			if(score.get(first) == 7 && score.get(second) <= 5){
