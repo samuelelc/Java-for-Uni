@@ -1,4 +1,6 @@
 package prg.es2;
+
+import prg.es2.Persona;
 import java.util.ArrayList;
 
 public class Principale{
