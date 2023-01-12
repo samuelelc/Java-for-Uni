@@ -1,19 +1,21 @@
+package prg.es2;
+
 public class Persona{
-	public String nome = new String();
-	public String cognome = new String();
+	public String nome;
+	public String cognome;
 	public int eta;
 
-	public void Persona(){
+	public Persona(){
 
 	}
 
-	public void Persona(String n, String c, int e){
+	public Persona(String n, String c, int e){
 		nome = n;
 		cognome = c;
 		eta = e;
 	}
 
-	public void Persona(String n, String c){
+	public Persona(String n, String c){
 		nome = n;
 		cognome = c;
 	}
