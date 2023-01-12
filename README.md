@@ -17,27 +17,63 @@
 #### Esercizio 7
   * [SommaArgs.java](./ES.01/src/SommaArgs.java)
 
-
-
 ## Esercitazione 2
 #### Esercizio 1 
+  * [Quadrato.java](./ES.02/src/Quadrato.java)
+  * [TestQuadrato.java](./ES.02/src/TestQuadrato.java) 
 #### Esercizio 2 
+  * [Rettangolo.java](./ES.02/src/Rettangolo.java)
+  * [TestRettangolo.java](./ES.02/src/TestRettangolo.java) 
 #### Esercizio 3
-
+  * [Rettangolo.java](./ES.02/src/Rettangolo.java)
+#### Esercizio 4 
+  * [Quadrato.java](./ES.02/src/Quadrato.java) 
+  
 ## Esercitazione 3
 #### Esercizio 1 
+  * [SommaVettori.java](./ES.03/src/SommaVettori.java) 
 #### Esercizio 2 
+  * [SommaMatrici.java](./ES.03/src/SommaMatrici.java) 
 #### Esercizio 3
+  * [Calcolatrice.java](./ES.03/src/Calcolatrice.java) 
+  * [TestMatematica.java](./ES.03/src/TestMatematica.java)
+#### Esercizio 4
+  * [Dado.java](./ES.03/src/Dado.java) 
+  * [TestDado.java](./ES.03/src/TestDado.java)
+#### Esercizio 5
+  * [Persona.java](./ES.03/src/Persona.java) (senza incapsulamento)
+  * [Principale.java](./ES.03/src/Principale.java)
 
 ## Esercitazione 4
-#### Esercizio 1 
+#### Esercizio 1
+  * [ProgrammaInterattivo.java](./ES.04/src/ProgrammaInterattivo.java) 
 #### Esercizio 2 
+  * [Principale.java](./ES.04/src/Principale.java) 
 #### Esercizio 3
+  * [ProgrammaInterattivo.java](./ES.04/src/ProgrammaInterattivo.java) 
+#### Esercizio 4
+  * [Rubrica.java](./ES.04/src/Rubrica.java) 
+#### Esercizio 5
+  * [Punto.java](./ES.04/src/Punto.java) (senza incapsulamento)
+  * [TestPunto.java](./ES.04/src/TestPunto.java) 
 
 ## Esercitazione 5
 #### Esercizio 1 
+  * [Punto.java](./ES.05/src/Punto.java) (con incapsulamento) 
+  * [TestPunto.java](./ES.05/src/TestPunto.java) 
 #### Esercizio 2 
+  * [Persona.java](./ES.05/src/Persona.java) (con incapsulamento) 
+  * [TestPersona.java](./ES.05/src/TestPersona.java)
 #### Esercizio 3
+  * [Razionale.java](./ES.05/src/Razionale.java) 
+  * [TestRazionale.java](./ES.05/src/TestRazionale.java)
+#### Esercizio 4
+  * [Date.java](./ES.05/src/Date.java) 
+  * [TestDate.java](./ES.05/src/TestDate.java)
+#### Esercizio 5
+  * [Studente.java](./ES.05/src/Studente.java) 
+  * [TestStudente.java](./ES.05/src/TestStudente.java)
+
 
 ## Esercitazione 6
 #### Esercizio 1 
