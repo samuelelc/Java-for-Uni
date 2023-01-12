@@ -91,4 +91,9 @@
   * [GiocatoreComputer.java](./EsamiPassati/src/GiocatoreComputer.java)
   * [Scacchiera.java](./EsamiPassati/src/Scacchiera.java)
   * [Partita.java](./EsamiPassati/src/Partita.java)
+#### 4. SIMULATORE PARTITA DI TENNIS
+  * [Giocatore.java](./EsamiPassati/src/tennis/Giocatore.java)
+  * [Set.java](./EsamiPassati/src/tennis/Set.java)
+  * [Incontro.java](./EsamiPassati/src/tennis/Incontro.java)
+  * [TestTennis.java](./EsamiPassati/src/tennis/TestTennis.java)
 
