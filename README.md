@@ -77,33 +77,114 @@
 
 ## Esercitazione 6
 #### Esercizio 1 
+  * [ScannerPro.java](./ES.06/src/ScannerPro.java) (Singleton) 
+  * [Rubrica.java](./ES.06/src/Line.java)
 #### Esercizio 2 
+  * [IntegerSet.java](./ES.06/src/IntegerSet.java)
+  * [TestIntegerSet.java](./ES.06/src/TestIntegerSet.java)
 #### Esercizio 3
+  * [IntegerSet.java](./ES.06/src/IntegerSet.java)
+  * [TestIntegerSet.java](./ES.06/src/TestIntegerSet.java)
+#### Esercizio 4
+  * [Shape.java](./ES.06/src/Shape.java)
+  * [Circle.java](./ES.06/src/Circle.java)
+  * [Rectangle.java](./ES.06/src/Rectangle.java)
+  * [Square.java](./ES.06/src/Square.java)
+  * [TestShape.java](./ES.06/src/TestShape.java)
+ #### Esercizio 5
+  * [Point2D.java](./ES.06/src/Point2D.java)
+  * [Line.java](./ES.06/src/Line.java)
+  * [TestLine.java](./ES.06/src/TestLine.java)
+ #### Esercizio 6
+  * [Point3D.java](./ES.06/src/Point3D.java)
+  * [Plane.java](./ES.06/src/Plane.java)
 
 ## Esercitazione 7
-#### Esercizio 1 
+#### Esercizio 1
+  * [Randomizzatore.java](./ES.07/src/Randomizzatore.java)
+  * [Dado.java](./ES.07/src/Dado.java)
+  * [Moneta.java](./ES.07/src/Moneta.java)
+  * [TestDado.java](./ES.07/src/TestDado.java)
+  * [TestMoneta.java](./ES.07/src/TestMoneta.java)
 #### Esercizio 2 
+  * [Abbonato.java](./ES.07/src/Abbonato.java)
+  * [AbbonatoPremium.java](./ES.07/src/AbbonatoPremium.java)
+  * [Servizio.java](./ES.07/src/Servizio.java)
+  * [TestAbbonato.java](./ES.07/src/TestAbbonato.java)
 #### Esercizio 3
+  * [Partecipante.java](./ES.07/src/Partecipante.java)
+  * [Votante.java](./ES.07/src/Votante.java)
+  * [Televoto.java](./ES.07/src/Televoto.java)
+  * [TestTelevoto.java](./ES.07/src/TestTelevoto.java)
 
 ## Esercitazione 8
 #### Esercizio 1 
+  * [Stack.java](./ES.08/src/Stack.java)
+  * [TestStack.java](./ES.08/src/TestStack.java)
 #### Esercizio 2 
+  * [Drawable.java](./ES.08/src/Drawable.java)
+  * [Scalable.java](./ES.08/src/Scalable.java)
+  * [Shape.java](./ES.06/src/Shape.java)
+  * [Circle.java](./ES.06/src/Circle.java)
+  * [Rectangle.java](./ES.06/src/Rectangle.java)
+  * [Square.java](./ES.06/src/Square.java)
+  * [TestShape.java](./ES.06/src/TestShape.java)
 #### Esercizio 3
+  * [Veicolo.java](./ES.08/src/Veicolo.java)
+  * [VeicoloAMotore.java](./ES.08/src/VeicoloAMotore.java)
+  * [Ciclomotore.java](./ES.08/src/Ciclomotore.java)
+  * [Automobile.java](./ES.08/src/Automobile.java)
+  * [Bicicletta.java](./ES.08/src/Bicicletta.java)
+  * [TestVeicolo.java](./ES.08/src/TestVeicolo.java)
 
 ## Esercitazione 9
 #### Esercizio 1 
+  * [Abbonato.java](./ES.07/src/Abbonato.java)
+  * [AbbonatoPremium.java](./ES.07/src/AbbonatoPremium.java)
+  * [Servizio.java](./ES.07/src/Servizio.java)
+  * [TestAbbonato.java](./ES.07/src/TestAbbonato.java)
 #### Esercizio 2 
+  * [Complex.java](./ES.09/src/Complex.java)
+  * [TestComplex.java](./ES.09/src/TestComplex.java)
 #### Esercizio 3
+  * [Numero.java](./ES.09/src/Numero.java)
+  * [Aritmetica.java](./ES.09/src/Aritmetica.java)
+  * [TestNumero.java](./ES.09/src/TestNumero.java)
+#### Esercizio 4
+  * [ReversedString.java](./ES.09/src/ReversedString.java)
+  * [TestReversedString.java](./ES.09/src/TestReversedString.java)
 
-## Esercitazione 10
+## Esercitazione 10 (sulle eccezioni)
 #### Esercizio 1 
+  * [Punto.java](./ES.05/src/Punto.java) 
+  * [TestPunto.java](./ES.05/src/TestPunto.java) 
 #### Esercizio 2 
+  * [Razionale.java](./ES.05/src/Razionale.java) 
 #### Esercizio 3
+  * [Date.java](./ES.05/src/Date.java)
+#### Esercizio 4
+  * [IntegerSet.java](./ES.06/src/IntegerSet.java) 
+#### Esercizio 5
+* [Complex.java](./ES.09/src/Complex.java)
+* [Razionale.java](./ES.05/src/Razionale.java) 
+#### Esercizio 6
+  * [Stack.java](./ES.08/src/Stack.java)
+#### Esercizio 7
+  * [Stack.java](./ES.08/src/Stack.java)
 
 ## Esercitazione 11
 #### Esercizio 1 
+  * [VectorInteger.java](./ES.11/src/VectorInteger.java)
+  * [TestVectorInteger.java](./ES.11/src/TestVectorInteger.java)
 #### Esercizio 2 
+  * [Contatto.java](./ES.11/src/Contatto.java)
+  * [Amico.java](./ES.11/src/Amico.java)
+  * [Collega.java](./ES.11/src/Collega.java)
+  * [Rubrica.java](./ES.11/src/Rubrica.java)
 #### Esercizio 3
+  * [SplitText.java](./ES.11/src/SplitText.java)
+#### Esercizio 4
+  * [CrivelloDiEratostene.java](./ES.11/src/CrivelloDiEratostene.java)
 
 ## Esami di Anni Precedenti
 #### 1. GESTIONE DI UN MUSEO
