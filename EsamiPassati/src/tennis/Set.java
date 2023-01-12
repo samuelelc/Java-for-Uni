@@ -5,51 +5,55 @@ import java.util.Map;
 
 public class Set{
 	private int numeroGiochi = 6;
-	private Map<Giocatore, Integer> score;
 	private Giocatore first, second;
 	
 	public Set(Giocatore first, Giocatore second){
 		this.first = first;
 		this.second = second;
-		this.score = new HashMap<>(2);
-	}
-	
-	private Giocatore setScore(int giocoVinto){ //ritorna il giocatore che ha acquistato il punto
-		Giocatore winner;
-		if(giocoVinto == 0){
-			winner = this.first;
-			this.score.put(this.first, score.get(first) + 1);
-		} else {
-			winner = this.second;
-			this.score.put(this.second, score.get(second) + 1);
-		}
-		//Stampa risultato parziale
-		System.out.println(this.score.get(first) + " - " + this.score.get(second));
-		return winner;
 	}
 	
 	public Giocatore simulaSet(){	//output vincitore
-		this.score.put(first, 0);
-		this.score.put(second, 0);
-		System.out.println("0 - 0");
-		while(score.get(first) != numeroGiochi || score.get(second) != numeroGiochi){
-			int giocoVinto = (int) (Math.random()*2.0);
-			this.setScore(giocoVinto);
-			if(score.get(first) == 7 && score.get(second) <= 5){
-				System.out.println(first + " ha vinto il set " + score.get(first) + " - " + score.get(second));
-				return first;			
+		first.resetPoints();
+		second.resetPoints();
+		this.printPoints();
+		while(first.getPoints() != numeroGiochi || second.getPoints() != numeroGiochi){
+			int random = (int)(Math.random() * 2);
+			if(random == 0){
+				first.incrementPoints();
+			} else {
+				second.incrementPoints();
 			}
-			if(score.get(first) <= 5 && score.get(second) == 7){
-				System.out.println(second + " ha vinto il set " + score.get(first) + " - " + score.get(second));
-				return second;
+			this.printPoints();
+			if(first.getPoints() == 7 && second.getPoints() <= 5){
+				System.out.println("Set vinto da " + first.incrementSetsWon() + ". Risultato: " + stringPoints() + ". Set: " + first + " " + first.getSetsWon() + " - " + second.getSetsWon() + " " + second);
+				return first;
+			}
+			if(second.getPoints() == 7 && first.getPoints() <= 5){
+				System.out.println("Set vinto da " + second.incrementSetsWon() + ". Risultato: " + stringPoints() + ". Set: " + first + " " + first.getSetsWon() + " - " + second.getSetsWon() + " " + second);
+				return first;
 			}
 		}
-		Giocatore winner = first;
-		while(Math.abs(score.get(first)-score.get(second)) < 2){
-			int giocoVinto = (int) (Math.random()*2.0);
-			winner = this.setScore(giocoVinto);
+		Giocatore winner = null;
+		while(Math.abs(first.getPoints() - second.getPoints()) < 2){
+			int random = (int)(Math.random() * 2);
+			if(random == 0){
+				winner = first.incrementPoints();
+			} else {
+				winner = second.incrementPoints();
+			}
+			this.printPoints();
 		}
-		System.out.println(winner + " ha vinto il set " + score.get(first) + " - " + score.get(second));
+		System.out.println("Set vinto da " + winner.incrementSetsWon() + ". Risultato: " + stringPoints() + ". Set: " + first + " " + first.getSetsWon() + " - " + second.getSetsWon() + " " + second);
 		return winner;
+	}
+	
+	private Set printPoints(){
+		System.out.println(this.stringPoints());
+		return this;
+	}
+	
+	private String stringPoints(){
+		String res = first + " " + first.getPoints() + " - " + second.getPoints() + " " + second;
+		return res;
 	}
 }
