@@ -4,6 +4,8 @@ public class Giocatore{
 	private int posClassifica;
 	private String name;
 	private String surname;
+	private int points;
+	private int setsWon;
 	
 	public Giocatore(String name, String surname){
 		this.setName(name).setSurname(surname);
@@ -34,6 +36,44 @@ public class Giocatore{
 		return this;
 	}
 	
+	private Giocatore setPoints(int points){
+		if(points >= 0){
+			this.points = points;
+		} else {
+			throw new IllegalArgumentException("Impossibile inserire punteggio negativo");
+		}	
+		return this;
+	}
+	
+	private Giocatore setSetsWon(int setsWon){
+		if(setsWon >= 0){
+			this.setsWon = setsWon;
+		} else {
+			throw new IllegalArgumentException("Impossibile inserire punteggio negativo");
+		}	
+		return this;
+	}
+	
+	public Giocatore incrementPoints(){
+		this.setPoints(this.getPoints()+1);
+		return this;
+	}
+	
+	public Giocatore incrementSetsWon(){
+		this.setSetsWon(this.getSetsWon()+1);	
+		return this;
+	}
+	
+	public Giocatore resetPoints(){
+		this.setPoints(0);
+		return this;
+	}
+	
+	public Giocatore resetSetsWon(){
+		this.setSetsWon(0);	
+		return this;
+	}
+	
 	//metodi get
 	public String getName(){
 		return this.name;
@@ -45,6 +85,14 @@ public class Giocatore{
 	
 	public int getPosClassifica(){
 		return this.posClassifica;
+	}
+	
+	public int getPoints(){
+		return this.points;
+	}
+	
+	public int getSetsWon(){
+		return this.setsWon;
 	}
 	
 	//toString method
