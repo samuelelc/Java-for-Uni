@@ -23,8 +23,8 @@ public class Seggio{
 		allStudents.add(new Candidato(1241245343, 382700, "Gianni", "Bisesi", "Diritto allo studio"));
 		allStudents.add(new Candidato(1249912453, 382722, "Carlo", "Lupi", "Liberi"));
 		
-		schedeBianche.setSchedeBianche(0);
-		schedeNonValide.setSchedeNonValide(0);
+		this.setSchedeBianche(0);
+		this.setSchedeNonValide(0);
 	}
 	
 	//metodi set
