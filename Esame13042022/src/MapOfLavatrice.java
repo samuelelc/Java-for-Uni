@@ -2,11 +2,12 @@ package prg.esame13042022;
 
 import java.util.SortedMap;
 import java.util.TreeMap;
+import java.util.TreeSet;
 import java.util.Scanner;
 
 public class MapOfLavatrice{
-	private SortedMap<String, Lavatrice> allLavatriceM = new TreeMap<>();	//ordinate per modello
-	private SortedMap<Lavatrice, String> allLavatriceC = new TreeMap<>();	//ordinate per capacità
+	private SortedMap<String, Lavatrice> allLavatrice = new TreeMap<>();	//ordinate per modello
+	
 	
 	public MapOfLavatrice add(String marca, String modello, int capacita){
 		this.add(new Lavatrice(marca, modello, capacita));
@@ -14,8 +15,8 @@ public class MapOfLavatrice{
 	}
 	
 	public MapOfLavatrice add(Lavatrice newLavatrice){
-		allLavatriceM.put(newLavatrice.getModello(), newLavatrice);
-		allLavatriceC.put(newLavatrice, newLavatrice.getModello());
+		allLavatrice.put(newLavatrice.getModello(), newLavatrice);
+		
 		return this;
 	}
 	
@@ -31,7 +32,7 @@ public class MapOfLavatrice{
 	}
 	
 	public MapOfLavatrice remove(String modello){
-		if(allLavatriceC.remove(allLavatriceM.remove(modello))!=null){
+		if(allLavatrice.remove(modello)!=null){
 			System.out.print("Rimozione avvenuta con successo");
 		} else {
 			System.out.print("Modello non presente nella Map");
@@ -40,7 +41,7 @@ public class MapOfLavatrice{
 	}
 	
 	public MapOfLavatrice print(){
-		System.out.println(allLavatriceC);
+		System.out.println(new TreeSet<>(allLavatrice.values()));
 		return this;
 	}
 } 
